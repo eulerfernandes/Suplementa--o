@@ -1,0 +1,261 @@
+/* Configuração geral */
+body {
+    background-color: #f5faff;
+    /* Azul claro suave */
+    color: #333;
+    /* Texto em cinza escuro */
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #0047ab;
+    /* Azul escuro */
+    border-bottom: 2px solid #0a06d6;
+    /* Azul mais escuro */
+}
+
+header h2 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #ffffff;
+    /* Branco */
+}
+
+/* Navegação */
+
+.menu {
+
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+
+}
+
+.menu a {
+    color: #f1f3f5;
+    /* Azul escuro */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 7px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+
+}
+
+.menu a:hover {
+    background-color: #2008f5;
+    /* Azul mais escuro */
+    color: #ffffff;
+    /* Branco */
+    transform: scale(1.1);
+    border-radius: 10px;
+}
+
+/* CSS para centralizar e escurecer a imagem da parte superior */
+.top-image {
+    text-align: center;
+}
+
+.top-image img {
+    width: 90%;
+    height: auto;
+    filter: brightness(90%);
+    transition: filter 0.3s ease;
+}
+
+.top-image img:hover {
+    filter: brightness(100%);
+}
+
+/* Conteúdo principal */
+main {
+    padding: 30px;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #0047ab;
+    /* Azul escuro */
+}
+
+/* Container de itens */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.item {
+    background-color: #ffffff;
+    /* Branco */
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #0047ab;
+    /* Azul escuro */
+}
+
+.item:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 4px 20px rgba(0, 71, 171, 0.3);
+}
+
+.item h3 {
+    margin-bottom: 15px;
+    color: #0047ab;
+    /* Azul escuro */
+    font-size: 1.3em;
+    text-decoration: none;
+}
+
+.item p {
+    color: #666;
+    /* Cinza médio */
+}
+
+/* Seção Sobre */
+#sobre {
+    padding: 40px 20px;
+    background-color: #e3f2fd;
+    /* Azul muito claro */
+    text-align: center;
+    color: #333;
+    /* Cinza escuro */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+#sobre h2 {
+    color: #0047ab;
+    /* Azul escuro */
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    text-decoration: none;
+}
+
+#sobre .conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#sobre .sobre-img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0;
+}
+
+#sobre .sobre-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+#sobre h3 {
+    font-size: 1.1em;
+    line-height: 1.8;
+    text-align: justify;
+    max-width: 500px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+/* Rodapé */
+footer {
+    background-color: #0047ab;
+    /* Azul escuro */
+    color: #ffffff;
+    /* Branco */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    border-top: 2px solid #003c91;
+    /* Azul mais escuro */
+}
+
+footer strong {
+    color: #ffffff;
+    /* Branco */
+}
+
+/* Estilo para dispositivos menores */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .item {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item {
+        width: 90%;
+    }
+
+    main h2 {
+        font-size: 2.2em;
+    }
+
+    header h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .item {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    #sobre .conteudo {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    #sobre .sobre-img {
+        max-width: 40%;
+    }
+
+    #sobre p {
+        max-width: 55%;
+        margin-left: 20px;
+    }
+}
