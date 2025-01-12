@@ -30,16 +30,13 @@ header h2 {
 }
 
 /* Navegação */
-
 .menu {
-
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 25px;
     margin: 0;
     padding: 0;
-
 }
 
 .menu a {
@@ -50,7 +47,6 @@ header h2 {
     padding: 7px;
     border-radius: 10px;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-
 }
 
 .menu a:hover {
@@ -89,6 +85,17 @@ main h2 {
     margin-bottom: 30px;
     color: #0047ab;
     /* Azul escuro */
+}
+
+/* Título "Explore Nossos Suplementos" */
+#explore-title {
+    text-align: center;
+    margin: 20px auto;
+    font-size: 2em;
+    font-weight: bold;
+    color: #0047ab;
+    /* Azul escuro */
+    width: 100%;
 }
 
 /* Container de itens */
@@ -141,7 +148,6 @@ main h2 {
     display: flex;
     flex-direction: column;
     gap: 20px;
-
 }
 
 #sobre h2 {
@@ -202,35 +208,32 @@ footer strong {
 }
 
 /* Estilo para dispositivos menores */
-@media (max-width: 1024px) {
-    .container {
-        flex-direction: row;
-        align-items: center;
-    }
-
+@media (max-width: 768px) {
     .item {
-        width: 45%;
+        width: 80%;
+        /* Adapta a largura para telas pequenas */
     }
 }
 
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
+@media (max-width: 480px) {
     .item {
         width: 90%;
     }
-
-    main h2 {
-        font-size: 2.2em;
-    }
-
-    header h2 {
-        font-size: 1.5em;
-    }
 }
+
+
+.item {
+    width: 90%;
+}
+
+main h2 {
+    font-size: 2.2em;
+}
+
+header h2 {
+    font-size: 1.5em;
+}
+
 
 @media (max-width: 480px) {
     .menu {
